@@ -2392,7 +2392,7 @@ body {
   .x-roast-container { height: 700px; }
 
   /* ── Mood intro ── */
-  .x-mood-intro { min-height: auto; padding: 200px 16px 40px; }
+  .x-mood-intro { min-height: auto; padding: 340px 16px 40px; }
   .x-mood-line { font-size: 24px; font-weight: 800; }
 
   /* ── Tabs: single column on mobile ── */
