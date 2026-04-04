@@ -1780,6 +1780,7 @@ function initPricing() {
       start: 'top 70%',
       once: true,
       onEnter: () => {
+        if (window.innerWidth <= 768) { burstPricingSparks(); return; }
         const freeCard = document.querySelector('.x-pricing-card[data-tier="free"]');
         const proCard = document.querySelector('.x-pricing-card[data-tier="pro"]');
 

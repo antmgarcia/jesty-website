@@ -2438,8 +2438,9 @@ body {
   .x-pricing-stack { min-height: auto; flex-direction: column; align-items: center; gap: 12px; }
   .x-pricing-card { position: relative; width: 100%; max-width: 320px; }
   .x-pricing-card[data-tier="free"],
-  .x-pricing-card[data-tier="pro"] { transform: none; opacity: 1; }
-  .x-pricing-card.featured { transform: none; }
+  .x-pricing-card[data-tier="pro"] { transform: none !important; opacity: 1; left: auto; right: auto; top: auto; }
+  .x-pricing-card.featured { transform: none !important; left: auto; }
+  .x-pricing-card.featured::before { display: none; }
 
   /* ── Footer ── */
   .x-footer-inner { flex-direction: column; gap: 32px; }
