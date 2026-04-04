@@ -2441,8 +2441,8 @@ body {
   .x-pricing-card { position: relative !important; width: 100% !important; max-width: 100% !important; left: auto !important; right: auto !important; top: auto !important; transform: none !important; opacity: 1 !important; }
 
   /* ── Footer ── */
-  .x-footer-reveal-bg { opacity: 0.15; }
-  .x-footer-bg-char { font-size: 30vw; }
+  .x-footer-bg-char { font-size: 24vw; }
+  .x-footer-cta { padding-top: 240px; }
   .x-footer-inner { flex-direction: column; gap: 32px; }
   .x-footer-links { gap: 32px; flex-wrap: wrap; }
 
