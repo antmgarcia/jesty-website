@@ -1315,6 +1315,7 @@ body {
   text-align: center;
   line-height: 1.35;
   max-width: 420px;
+  min-height: 54px;
 }
 
 .x-newtab-actions {
