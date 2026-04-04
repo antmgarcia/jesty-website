@@ -2392,7 +2392,7 @@ body {
   .x-roast-container { height: 700px; }
 
   /* ── Mood intro ── */
-  .x-mood-intro { min-height: auto; padding: 340px 16px 40px; }
+  .x-mood-intro { min-height: auto; padding: 400px 16px 40px; }
   .x-mood-line { font-size: 24px; font-weight: 800; }
 
   /* ── Tabs: single column on mobile ── */
@@ -2416,7 +2416,7 @@ body {
     overflow: visible;
   }
   .x-mini-panel { display: none !important; }
-  .x-feature-preview-wide { height: 260px; }
+  .x-feature-preview-wide { height: 260px !important; margin-bottom: 14px; }
   .x-hero-card-toggle { display: none; }
   .x-newtab-widgets { display: none; }
   .x-newtab-actions { display: none; }
