@@ -2410,17 +2410,26 @@ body {
 
   .x-feature-card { border-radius: 14px; }
 
-  /* Hero card: stack vertically */
+  /* Hero card: same as other cards on mobile */
+  .x-feature-hero-card { padding: 14px; }
   .x-feature-hero-layout {
     flex-direction: column;
     height: auto;
     overflow: visible;
   }
   .x-mini-panel { display: none !important; }
-  .x-feature-preview-wide { height: 260px !important; margin-bottom: 14px; }
+  .x-feature-preview-wide {
+    height: 260px !important;
+    margin-bottom: 0 !important;
+  }
   .x-hero-card-toggle { display: none; }
   .x-newtab-widgets { display: none; }
   .x-newtab-actions { display: none; }
+  /* Hide chrome frame, show scene directly */
+  .x-window-chrome { display: none; }
+  .x-window-urlbar { display: none; }
+  .x-window-content { border-radius: 6px; }
+  .x-scene-newtab { padding: 16px; padding-bottom: 10%; }
 
 
   /* ── Pricing ── */
