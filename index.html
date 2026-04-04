@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesty — Your browser's brutally honest companion</title>
+  <meta name="description" content="Meet Jesty! The companion that roasts your browsing, keeps you focused, and rewards you with games and collectibles.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Danfo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+  <!-- SVG symbols injected by characters.js -->
+  <svg style="display: none;"></svg>
+
+  <main class="x-main">
+
+  <!-- NAV ISLAND -->
+  <nav class="x-nav-island" id="x-nav-island">
+    <div class="x-nav-block-left">
+      <a href="#" class="x-nav-icon">
+        <img src="assets/icon.svg" alt="Jesty" width="28" height="28">
+      </a>
+      <div class="x-nav-acc-slots" id="x-nav-acc-slots">
+        <div class="x-nav-acc-mini" id="x-nav-acc-hat" title="Hat"></div>
+        <div class="x-nav-acc-mini" id="x-nav-acc-glasses" title="Glasses"></div>
+        <button class="x-nav-acc-add" id="x-nav-acc-add" title="Accessories">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="x-nav-spacer"></div>
+    <a href="#" class="x-nav-cta">Add to Chrome</a>
+  </nav>
+
+  <!-- ACCESSORIES DROPDOWN -->
+  <div class="x-acc-dropdown hidden" id="x-acc-dropdown">
+    <div class="x-acc-grid" id="x-acc-grid-all"></div>
+  </div>
+
+  <!-- ROAST NOTIFICATIONS -->
+  <div class="x-roast-notifs" id="x-roast-notifs"></div>
+
+  <!-- HERO -->
+  <section class="x-hero">
+    <div class="x-hero-bg-word" id="x-hero-bg-word" aria-hidden="true"></div>
+    <div class="x-hero-inner">
+      <div class="x-hero-stage" id="x-hero-stage">
+        <div class="x-hero-character" id="x-hero-character">
+          <svg id="x-hero-face" viewBox="-15 -10 150 140" width="280" height="260"></svg>
+          <div class="x-hero-floor"></div>
+        </div>
+      </div>
+      <h1 class="x-hero-title">Your browser's brutally honest companion</h1>
+      <p class="x-hero-subtitle">Jesty reads your tabs, roasts your habits, keeps you focused, and turns productivity into a game. Also judges you.</p>
+      <div class="x-color-picker" id="x-color-picker"></div>
+    </div>
+  </section>
+
+  <!-- ROAST CARDS -->
+  <section class="x-roast-section">
+    <div class="x-roast-container" id="x-roast-container"></div>
+  </section>
+
+  <!-- MOOD INTRO -->
+  <section class="x-mood-intro" id="x-mood-intro">
+    <div class="x-section-inner">
+      <div class="x-mood-lines">
+        <h1 class="x-mood-line">Every roast has a mood</h1>
+        <h1 class="x-mood-line">Every mood has a face</h1>
+        <h1 class="x-mood-line">Every face has a feeling</h1>
+        <h1 class="x-mood-line">Every feeling is about yourself!</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="x-features" id="x-features">
+    <div class="x-features-inner">
+
+      <!-- Row 1: Personalized Roasts — chrome frame + text side by side -->
+      <div class="x-feature-hero-card" id="x-hero-card-wrap">
+        <button class="x-hero-card-toggle" id="x-hero-card-toggle" title="Collapse">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+        <div class="x-feature-hero-layout" id="x-hero-card-body">
+          <div class="x-feature-preview x-feature-preview-wide" id="x-fp-roast"></div>
+          <div class="x-mini-panel" id="x-mini-panel" style="position:relative">
+            <div class="x-mp-levelup" id="x-mp-levelup">
+              <div class="x-mp-levelup-glow"></div>
+              <span class="x-mp-levelup-label">Level Up</span>
+              <div class="x-mp-levelup-flipper" id="x-mp-flipper">
+                <div class="x-mp-flip-front">
+                  <div class="x-mp-levelup-number" data-num="6">6</div>
+                </div>
+                <div class="x-mp-flip-back" id="x-mp-flip-acc"></div>
+              </div>
+              <div class="x-mp-levelup-unlock" id="x-mp-unlock"><span>Crown</span> unlocked</div>
+              <div class="x-mp-levelup-sparks" id="x-mp-sparks"></div>
+            </div>
+            <div class="x-mini-panel-inner">
+              <div class="x-mini-panel-topbar">
+                <div class="x-mini-panel-level">5</div>
+                <div class="x-mini-panel-acc-slot" id="x-mp-hat"></div>
+                <div class="x-mini-panel-acc-slot" id="x-mp-glasses"></div>
+                <div class="x-mini-panel-spacer-h"></div>
+                <div class="x-mini-panel-settings">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                </div>
+              </div>
+              <div class="x-mini-panel-hero">
+                <div class="x-mini-panel-character" id="x-mp-char"></div>
+                <div class="x-mini-panel-floor"></div>
+              </div>
+              <div class="x-mini-panel-comment" id="x-mp-comment"></div>
+              <div class="x-mini-panel-focus">Stay Focused</div>
+              <div class="x-mini-panel-crowd" id="x-mp-crowd"></div>
+              <div class="x-mini-panel-section">
+                <div class="x-mini-panel-section-header">
+                  <span class="x-mini-panel-section-title">Tasks <span class="x-mp-count">(2)</span></span>
+                  <span class="x-mini-panel-section-link">View all</span>
+                </div>
+                <div class="x-mini-panel-task">
+                  <div class="x-mini-panel-task-check"></div>
+                  <div class="x-mini-panel-task-info">
+                    <span class="x-mini-panel-task-name">Try managing tasks with Jesty</span>
+                    <span class="x-mini-panel-task-meta">3 notes</span>
+                  </div>
+                </div>
+                <div class="x-mini-panel-task">
+                  <div class="x-mini-panel-task-check"></div>
+                  <div class="x-mini-panel-task-info">
+                    <span class="x-mini-panel-task-name">Focus notes · 1m session</span>
+                    <span class="x-mini-panel-task-meta">1 note</span>
+                  </div>
+                </div>
+                <div class="x-mini-panel-task-add">+ Add task</div>
+              </div>
+              <div class="x-mini-panel-funzone">
+                <div class="x-mini-panel-section-header">
+                  <span class="x-mini-panel-section-title x-mp-label">FUN ZONE</span>
+                  <span class="x-mini-panel-section-chip">Play to level up</span>
+                </div>
+                <div class="x-mini-panel-game-card">
+                  <div class="x-mini-panel-game-icon" id="x-mp-game-icon"></div>
+                  <span class="x-mini-panel-game-name">Memory Match</span>
+                  <svg class="x-mini-panel-game-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </div>
+              </div>
+              <div class="x-mini-panel-grow"></div>
+              <div class="x-mini-panel-chat-peek">
+                <div class="x-mini-panel-chat-avatar" id="x-mp-avatar"></div>
+                <div class="x-mini-panel-chat-info">
+                  <span class="x-mini-panel-chat-name">Jesty</span>
+                  <span class="x-mini-panel-chat-status">Ready to argue</span>
+                </div>
+              </div>
+            </div>
+            <div class="x-mini-panel-input">
+              <div class="x-mini-panel-input-bar">
+                <span class="x-mini-panel-input-placeholder">Talk back to Jesty...</span>
+                <div class="x-mini-panel-send">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="x-features-grid">
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-chat"></div>
+          <h3 class="x-feature-name">Talk Back</h3>
+          <p class="x-feature-desc">Disagree with your roast? Open the side panel and argue. Jesty won't back down easily.</p>
+        </div>
+
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-focus"></div>
+          <h3 class="x-feature-name">Focus Time</h3>
+          <p class="x-feature-desc">Built-in focus timer with distraction blocking. Jesty watches your tabs and keeps you honest.</p>
+        </div>
+
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-tasks"></div>
+          <h3 class="x-feature-name">Tasks</h3>
+          <p class="x-feature-desc">Track your to-dos right from the new tab. Checklists, notes, and Jesty judging your completion rate.</p>
+        </div>
+
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-games"></div>
+          <h3 class="x-feature-name">Mini-Games</h3>
+          <p class="x-feature-desc">Memory Match, Tab Quiz, and Roast Trivia. Three games that earn XP and unlock accessories.</p>
+        </div>
+
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-acc"></div>
+          <h3 class="x-feature-name">Accessories</h3>
+          <p class="x-feature-desc">Hats, glasses, and cosmetics. Dress up your Jesty by leveling up through roasts and games.</p>
+        </div>
+
+        <div class="x-feature-card">
+          <div class="x-feature-preview" id="x-fp-dossier"></div>
+          <h3 class="x-feature-name">Your Dossier</h3>
+          <p class="x-feature-desc">Big stats, category breakdown, and a verdict on your browsing. Jesty sees the patterns.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB MANAGER SHOWCASE -->
+  <section class="x-tabs-showcase" id="x-tabs-showcase">
+    <div class="x-section-inner">
+      <span class="x-tabs-count" id="x-tabs-count">27 tabs open</span>
+      <h2 class="x-tabs-roast" id="x-tabs-roast">At this point, just marry your browser.</h2>
+      <div class="x-tabs-grid" id="x-tabs-grid"></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="x-pricing" id="x-pricing">
+    <div class="x-section-inner">
+      <h2 class="x-section-title">Plead Guilty to unlock full potential</h2>
+      <p class="x-pricing-desc">One payment. No subscription. Unlimited roasts, all 10 expressions, mini-games, tasks, accessories, and your own collectible trading card. $5 and Jesty never holds back again.</p>
+
+      <div class="x-pricing-stack">
+        <div class="x-pricing-sparks" id="x-pricing-sparks"></div>
+        <div class="x-pricing-card" data-tier="free">
+          <div class="x-pricing-face" data-mood="smug" data-color="lime"></div>
+          <span class="x-pricing-tier">Suspect</span>
+          <span class="x-pricing-price">Free</span>
+          <ul class="x-pricing-features">
+            <li>8 roasts/day</li>
+            <li>7 expressions</li>
+            <li>Focus timer</li>
+            <li>Chat with Jesty</li>
+          </ul>
+          <a href="#" class="x-btn x-btn-secondary x-btn-full">Add to Chrome</a>
+        </div>
+
+        <div class="x-pricing-card featured" data-tier="guilty">
+          <div class="x-pricing-face" data-mood="happy" data-color="pink" data-hat="crown"></div>
+          <span class="x-pricing-tier">Guilty</span>
+          <span class="x-pricing-price">$5 <span class="x-pricing-once">once</span></span>
+          <ul class="x-pricing-features">
+            <li>Unlimited roasts</li>
+            <li>10 expressions</li>
+            <li>Tasks + Mini-games</li>
+            <li>8 accessories</li>
+            <li>Trading card</li>
+          </ul>
+          <a href="#" class="x-btn x-btn-primary x-btn-full">Get Guilty</a>
+        </div>
+
+        <div class="x-pricing-card" data-tier="pro">
+          <div class="x-pricing-face" data-mood="smug" data-color="mint" data-hat="flame-crown"></div>
+          <span class="x-pricing-tier">Sentenced</span>
+          <span class="x-pricing-price">$5<span class="x-pricing-once">/mo</span></span>
+          <ul class="x-pricing-features">
+            <li>Everything in Guilty</li>
+            <li>13 expressions</li>
+            <li>11 accessories</li>
+            <li>Priority features</li>
+          </ul>
+          <a class="x-btn x-btn-secondary x-btn-full x-btn-disabled">Get Sentenced soon</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER (reveals behind store) -->
+  <footer class="x-footer-reveal">
+    <div class="x-footer-reveal-content">
+      <div class="x-footer-cta">
+        <div class="x-footer-reveal-bg" id="x-footer-bg-word" aria-hidden="true"></div>
+        <h2 class="x-cta-title">Ready to get judged?</h2>
+        <p class="x-cta-subtitle">Install Jesty and find out what your tabs say about you.</p>
+        <a href="#" class="x-btn x-btn-primary x-btn-lg x-cta-btn">Add to Chrome — It's free</a>
+      </div>
+      <div class="x-footer-nav">
+        <div class="x-footer-inner">
+          <div class="x-footer-left">
+            <div class="x-footer-brand">
+              <img src="assets/icon.svg" alt="Jesty" class="x-footer-icon" width="36" height="36">
+              <div>
+                <span class="x-footer-logo">Jesty</span>
+                <p class="x-footer-tagline">Your browser's brutally honest companion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="x-footer-links">
+            <div class="x-footer-col">
+              <span class="x-footer-col-title">Product</span>
+              <a href="#x-features">Features</a>
+              <a href="#x-pricing">Pricing</a>
+            </div>
+            <div class="x-footer-col">
+              <span class="x-footer-col-title">Resources</span>
+              <a href="privacy.html" target="_blank">Privacy Policy</a>
+              <a href="https://github.com/antmgarcia/Jesty" target="_blank">GitHub</a>
+            </div>
+            <div class="x-footer-col">
+              <span class="x-footer-col-title">Contact</span>
+              <a href="mailto:hey@jesty.fun">hey@jesty.fun</a>
+            </div>
+          </div>
+        </div>
+        <div class="x-footer-bottom">
+          <span>&copy; 2026 Jesty. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="characters.js"></script>
+  <script src="gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesty — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --bg-secondary: #F0EDEA;
+      --text: #1C1917;
+      --text-secondary: #6B6560;
+      --text-muted: #9C968F;
+      --border: #DDD9D5;
+      --accent: #A78BFA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .privacy-hero {
+      text-align: center;
+      padding: 60px 24px 40px;
+      position: relative;
+    }
+
+    .privacy-character {
+      width: 100px;
+      height: 93px;
+      margin: 0 auto 20px;
+    }
+    .privacy-character svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.06));
+    }
+
+    .privacy-hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .privacy-hero .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .privacy-content {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      line-height: 1.7;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 36px 0 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: var(--accent); }
+
+    .highlight {
+      background: var(--bg-secondary);
+      padding: 14px 18px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .privacy-footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .privacy-footer a { color: var(--text-muted); }
+    .privacy-footer a:hover { color: var(--text); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-link:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <svg style="display: none;"></svg>
+
+  <div class="privacy-hero">
+    <div class="privacy-character" id="privacy-char"></div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: April 2026</p>
+  </div>
+
+  <div class="privacy-content">
+    <h2>What Jesty accesses</h2>
+    <p>Jesty reads your open browser tab titles and URLs to generate roasts. This data is:</p>
+    <ul>
+      <li>Processed locally on your device</li>
+      <li>Sent to our secure proxy server, which forwards it to OpenAI's API only when generating a roast or chat response</li>
+      <li>Never stored on any server we control — requests are forwarded in real time and discarded</li>
+      <li>Never shared with third parties beyond what is described below</li>
+    </ul>
+
+    <h2>What Jesty stores</h2>
+    <p>All data is stored locally in your browser via Chrome's storage API:</p>
+    <ul>
+      <li>Your roast history (last 100 roasts)</li>
+      <li>Usage stats (roast count, streak, browsing patterns)</li>
+      <li>Conversation history (last 50 chats)</li>
+      <li>Your display name, color, and accessory preferences</li>
+      <li>Progression data (level, XP) and achievement milestones</li>
+      <li>Focus time session history (start time, duration, distraction count)</li>
+      <li>User-created tasks and checklist items</li>
+      <li>Mini-game progress (Memory Match, Tab Quiz, Roast Trivia)</li>
+      <li>Subscription status (tier, activation date)</li>
+    </ul>
+    <p>This data never leaves your device except when sent to OpenAI (via our proxy) for generating responses.</p>
+
+    <h2>Our proxy server</h2>
+    <p>Jesty does not call OpenAI directly. All API requests go through our Cloudflare Worker proxy, which holds the API key server-side. The proxy:</p>
+    <ul>
+      <li>Forwards your request to OpenAI and returns the response</li>
+      <li>Does not log, store, or retain any request data</li>
+      <li>Handles Stripe payment verification (see Payments below)</li>
+    </ul>
+    <p>OpenAI's <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">API data usage policy</a> applies to all forwarded requests. We send only the minimum data needed: tab titles, URLs, and browsing pattern summaries. We do not send personal files, passwords, or page content.</p>
+
+    <h2>Real-time context</h2>
+    <p>To make roasts more relevant, Jesty may fetch public data from third-party APIs:</p>
+    <ul>
+      <li><strong>Weather</strong> — Your approximate location is requested via the browser's geolocation API to fetch weather data. Location is never stored or sent to our servers.</li>
+      <li><strong>Cryptocurrency prices</strong> — Public price data from CoinGecko, only when crypto-related tabs are detected.</li>
+      <li><strong>Sports scores</strong> — Public scores from ESPN, only when sports-related tabs are detected.</li>
+    </ul>
+    <p>These requests are made directly from your browser. No personal data is included.</p>
+
+    <h2>Focus time</h2>
+    <p>Focus time is available to all users. When active, Jesty injects a small floating UI element on web pages to display your timer and provide quick actions. Session data (duration, distraction count) is stored locally and never sent to any server.</p>
+
+    <h2>Mini-games and progression</h2>
+    <p>Jesty includes mini-games (Memory Match, Tab Quiz, Roast Trivia) and an XP/leveling system. All game progress, scores, and unlocked accessories are stored locally in your browser. No gameplay data is sent to any server.</p>
+
+    <h2>Bitcoin inscription (optional)</h2>
+    <p>Premium users can optionally inscribe their Jesty Card on the Bitcoin blockchain via OrdinalsBot. If you choose to inscribe:</p>
+    <ul>
+      <li>Your card's HTML content (verdict text, stats, character art) is sent to the OrdinalsBot API</li>
+      <li>You provide a Bitcoin receiving address directly to OrdinalsBot</li>
+      <li>We verify verdict uniqueness via our proxy server</li>
+      <li>No inscription happens without your explicit action and payment</li>
+    </ul>
+    <p>OrdinalsBot's <a href="https://ordinalsbot.com" target="_blank">terms of service</a> apply to inscription orders.</p>
+
+    <h2>Background activity</h2>
+    <p>Jesty runs a background service worker that:</p>
+    <ul>
+      <li>Monitors tab opens and closes to detect when you act on a roast</li>
+      <li>Checks focus mode status if you have it enabled</li>
+      <li>Manages subscription validation</li>
+    </ul>
+    <p>All background processing happens locally on your device.</p>
+
+    <h2>Payments</h2>
+    <p>Premium purchases are processed through Stripe. Jesty detects a successful payment by watching for a Stripe success URL in your browser. We do not process, store, or have access to your payment details — all payment handling is done by Stripe under their <a href="https://stripe.com/privacy" target="_blank">privacy policy</a>.</p>
+
+    <h2>Analytics</h2>
+    <p>Jesty uses Mixpanel to collect anonymous usage analytics. This helps us understand which features are used and improve the product. We track:</p>
+    <ul>
+      <li>Feature usage events (e.g., roast generated, focus session started, game played)</li>
+      <li>Aggregate counts (total roasts, total chats)</li>
+      <li>Tier and color preferences</li>
+    </ul>
+    <p>Analytics data is tied to an anonymous ID — not your name, email, or browsing history. Tab titles, URLs, and roast content are never sent to Mixpanel. There are no ads. Mixpanel's <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank">privacy policy</a> applies.</p>
+
+    <h2>Data deletion</h2>
+    <p>Uninstalling the extension removes all locally stored data. You can also clear data manually through Chrome's extension settings.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? Reach out at <a href="mailto:hey@jesty.fun">hey@jesty.fun</a>.</p>
+  </div>
+
+  <div class="privacy-footer">
+    <span>&copy; 2026 Jesty. All rights reserved.</span> · <a href="index.html">Home</a> · <a href="mailto:hey@jesty.fun">Contact</a>
+  </div>
+
+  <script src="characters.js"></script>
+  <script>
+    JestyCharacters.init();
+    const SOURCE = { body: '#EBF34F', limb: '#C8D132', shadow: '#8A9618', highlight: '#F8FBCE' };
+    const PURPLE = { body: '#A78BFA', limb: '#7C5FD6', shadow: '#5B3FB5', highlight: '#D4C8FD' };
+    function recolor(c, f, t) {
+      for (const k of ['body','limb','shadow','highlight']) {
+        if (f[k] && t[k]) c = c.replace(new RegExp(f[k].replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi'), t[k]);
+      }
+      return c;
+    }
+    const sym = document.getElementById('face-thinking');
+    if (sym) {
+      const vb = sym.getAttribute('viewBox') || '-15 -10 150 140';
+      let content = sym.innerHTML;
+      content = content.replace(/id="clip-([^"]+)"/g, 'id="clip-$1-pp"');
+      content = content.replace(/url\(#clip-([^)]+)\)/g, 'url(#clip-$1-pp)');
+      content = recolor(content, SOURCE, PURPLE);
+      document.getElementById('privacy-char').innerHTML = `<svg viewBox="${vb}" width="100" height="93">${content}</svg>`;
+    }
+  </script>
+</body>
+</html>
