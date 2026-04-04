@@ -2393,7 +2393,7 @@ body {
 
   /* ── Mood intro ── */
   .x-mood-intro { min-height: auto; padding: 200px 16px 40px; }
-  .x-mood-line { font-size: clamp(32px, 8vw, 40px); font-weight: 800; }
+  .x-mood-line { font-size: 24px; font-weight: 800; }
 
   /* ── Tabs: single column on mobile ── */
   .x-tabs-grid { grid-template-columns: 1fr; }
@@ -2446,5 +2446,5 @@ body {
 
   .x-roast-container { height: 400px; }
 
-  .x-mood-line { font-size: clamp(28px, 8vw, 36px); }
+  .x-mood-line { font-size: 22px; }
 }
