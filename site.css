@@ -2442,7 +2442,8 @@ body {
 
   /* ── Footer ── */
   .x-footer-bg-char { font-size: 28vw; }
-  .x-footer-cta { justify-content: flex-end; padding-bottom: 60px; }
+  .x-footer-reveal-bg { top: 20%; }
+  .x-cta-title { margin-top: 180px; }
   .x-footer-inner { flex-direction: column; gap: 32px; }
   .x-footer-links { gap: 32px; flex-wrap: wrap; }
 
