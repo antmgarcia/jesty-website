@@ -2362,6 +2362,9 @@ body {
    RESPONSIVE
    ═══════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── Notifications: hide on mobile ── */
+  .x-roast-notifs { display: none; }
+
   /* ── Nav ── */
   .x-nav-acc-slots { display: none; }
   .x-acc-dropdown { display: none !important; }
@@ -2370,7 +2373,7 @@ body {
 
   /* ── Hero ── */
   .x-hero { padding: 90px 16px 40px; min-height: auto; }
-  .x-hero-title { font-size: 28px; }
+  .x-hero-title { font-size: clamp(28px, 5vw, 44px); }
   .x-hero-subtitle { font-size: 15px; }
   .x-hero-stage { height: 260px; }
   #x-hero-face { width: 200px; height: 186px; }
@@ -2388,9 +2391,9 @@ body {
   .x-roast-section { margin-top: -100px; }
   .x-roast-container { height: 700px; }
 
-  /* ── Mood intro: pushed down, bigger text ── */
+  /* ── Mood intro: pushed down, same heading style as tabs roast ── */
   .x-mood-intro { min-height: auto; padding: 420px 16px 60px; }
-  .x-mood-line { font-size: 40px; font-weight: 900; }
+  .x-mood-line { font-size: clamp(28px, 5vw, 44px); font-weight: 800; }
 
   /* ── Features ── */
   .x-features { padding: 60px 0; }
@@ -2440,5 +2443,5 @@ body {
 
   .x-roast-container { height: 400px; }
 
-  .x-mood-line { font-size: clamp(20px, 6.5vw, 30px); }
+  .x-mood-line { font-size: clamp(24px, 6vw, 36px); }
 }
