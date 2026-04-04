@@ -2363,7 +2363,7 @@ body {
    ═══════════════════════════════════════ */
 @media (max-width: 768px) {
   /* ── Notifications: hide on mobile ── */
-  .x-roast-notifs { display: none; }
+  .x-roast-notifs { display: none !important; }
 
   /* ── Nav ── */
   .x-nav-acc-slots { display: none; }
@@ -2391,9 +2391,12 @@ body {
   .x-roast-section { margin-top: -100px; }
   .x-roast-container { height: 700px; }
 
-  /* ── Mood intro: pushed down, same heading style as tabs roast ── */
-  .x-mood-intro { min-height: auto; padding: 420px 16px 60px; }
-  .x-mood-line { font-size: clamp(28px, 5vw, 44px); font-weight: 800; }
+  /* ── Mood intro ── */
+  .x-mood-intro { min-height: auto; padding: 200px 16px 40px; }
+  .x-mood-line { font-size: clamp(24px, 7vw, 36px); font-weight: 800; }
+
+  /* ── Tabs: single column on mobile ── */
+  .x-tabs-grid { grid-template-columns: 1fr; }
 
   /* ── Features ── */
   .x-features { padding: 60px 0; }
