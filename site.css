@@ -2448,6 +2448,8 @@ body {
     transform: none;
     margin: 0 auto 24px;
     z-index: 0;
+    width: 100%;
+    overflow: hidden;
   }
   .x-footer-cta { padding: 40px 24px 24px; }
   .x-cta-title { margin-top: 0; }
