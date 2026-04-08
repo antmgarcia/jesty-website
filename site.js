@@ -870,7 +870,7 @@ function initMiniPanel() {
   gsap.delayedCall(0.8, startMpBreathing);
   gsap.delayedCall(4, cycleQuip);
 
-  // Level-up celebration — triggers once after ~20s, loops every 25s
+  // Level-up celebration — triggers once after ~12s, loops every 15s
   function triggerLevelUp() {
     const overlay = document.getElementById('x-mp-levelup');
     const sparksEl = document.getElementById('x-mp-sparks');
@@ -951,11 +951,11 @@ function initMiniPanel() {
       overlay.classList.remove('visible');
       if (sparksEl) sparksEl.innerHTML = '';
       // Loop
-      gsap.delayedCall(25, triggerLevelUp);
+      gsap.delayedCall(15, triggerLevelUp);
     }});
   }
 
-  gsap.delayedCall(18, triggerLevelUp);
+  gsap.delayedCall(12, triggerLevelUp);
 }
 
 // XP toast on newtab roasts — shows on every 3rd roast
